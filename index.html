@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Easy Rio</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/icon.ico" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/angular-translate.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-storage-local/angular-translate-storage-local.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.1/angular-translate-storage-cookie/angular-translate-storage-cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-cookies.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/hospital.js"></script>
+    <script src="assets/js/delegacia.js"></script>
+    <script src="assets/js/turismo.js"></script>
+    <script src="assets/js/praias.js"></script>
+    <script src="assets/js/comer.js"></script>
+    <script src="assets/js/dormir.js"></script>
+    <script src="assets/js/eventos.js"></script>
+    <script src="assets/js/esportes.js"></script>
+    <script src="assets/js/hospitalmap.js"></script>
+    <script src="assets/js/delegaciamap.js"></script>
+    <script src="assets/js/comermap.js"></script>
+    <script src="assets/js/turismomap.js"></script>
+    <script src="assets/js/praiasmap.js"></script>
+    <script src="assets/js/dormirmap.js"></script>
+    <script src="assets/js/eventosmap.js"></script>
+    <script src="assets/js/esportesmap.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <header ng-controller="PageCrtl" role="banner">
+        <nav class="navbar bg-dark navbar-light navbar-expand-md shadow-sm navigation-clean-search">
+            <div class="container-fluid">
+                <a tabindex="1" class="navbar-brand" href="#"><img class="img-fluid" alt="Logo"
+                        src="assets/img/logo.png"></a>
+                <button class="navbar-dark navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+
+                    <form class="form-inline d-xl-flex mx-auto" target="_self" style="margin-bottom: 10px;">
+                        <div class="input-group" style="width: 360px;padding-right: 10px;">
+                            <input ng-model="searchBox" tabindex="2" aria-label="Search"
+                                class="form-control py-2 border-right-0 border" type="search" translate
+                                translate-attr-placeholder="HEADER.PLACEHOLDER.SEARCH" id="example-search-input"
+                                style="font-weight: 500; border-radius: 30px">
+
+                        </div>
+                    </form>
+
+                    <ul class="nav navbar-nav" style="padding-right: 10px;">
+                        <li class="nav-item dropdown d-xl-flex" role="menu">
+
+                            <a tabindex="3" class="dropdown-toggle nav-link" data-toggle="dropdown"
+                                aria-expanded="false" translate="HEADER.LANGUAGE.TITLE">Escolha seu idioma &nbsp;
+                                &nbsp; &nbsp;</a>
+                            <div class="dropdown-menu">
+                                <a href="#" ng-click="alterarIdioma('pt')" class="dropdown-item translate" id="pt"
+                                    role="menuitem"><span
+                                        class="flag-icon flag-icon-br"></span>{{"HEADER.LANGUAGE.PTBR" | translate}}</a>
+                                <a href="#" ng-click="alterarIdioma('en')" class="dropdown-item translate" id="en"
+                                    role="menuitem"><span
+                                        class="flag-icon flag-icon-us"></span>{{"HEADER.LANGUAGE.ENUS" | translate}}</a>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <article role="article">
+                <ui-view></ui-view>
+            </article>
+        </div>
+    </section>
+
+    <div class="footer-dark">
+        <footer role="contentinfo">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div>
+                        <img src="assets/img/logo2.png" alt="Logo Rodapé" class="justify-content-center">
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Easy Rio</h3>
+                        <p>{{"FOOTER.FOOTERDESC" | translate}}</p>
+                    </div>
+                    <div>
+                        <div class="col-md-12 item text">
+                            <h3>Entre em contato conosco</h3>
+                            <input type="email" class="form-control" placeholder="Insira seu email."
+                                style="margin-bottom:5px; border-radius:15px">
+
+                            <textarea class="form-control" rows="3" placeholder="Deixe seu comentário."
+                                style="margin-bottom:5px; border-radius:15px"></textarea>
+
+                            <button class="btn btn-primary btn-lg" type="button" style="float: right;">ENVIAR</button>
+                        </div>
+                    </div>
+                    <div class="col d-xl-flex justify-content-xl-center align-items-xl-center item social">
+                        <a tabindex="12" href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a>
+                        <a tabindex="13" href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a>
+                        <a tabindex="14" href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">Easy Rio © 2019</p>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+</body>
+
+</html>

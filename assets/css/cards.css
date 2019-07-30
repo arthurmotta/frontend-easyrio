@@ -1,0 +1,73 @@
+.container {
+    margin-top: 20px;
+}
+
+.lib-panel {
+    margin-bottom: 20Px;
+}
+
+.lib-panel img {
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 30px;
+}
+
+.lib-panel .row,
+.lib-panel .col-md-6 {
+    padding: 0;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+
+.lib-panel .lib-row {
+    padding: 0 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header {
+
+    font-size: 20px;
+    padding: 10px 20px 0 20px;
+}
+
+.lib-panel .lib-row.lib-header .lib-header-seperator {
+    height: 2px;
+    width: 26px;
+    margin: 7px 0 7px 0;
+}
+
+.lib-panel .lib-row.lib-desc {
+    position: relative;
+    height: 100%;
+    display: block;
+    font-size: 18px;
+}
+
+.lib-panel .lib-row.lib-desc a {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 20px;
+}
+
+.row-margin-bottom {
+    margin-bottom: 20px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .10);
+}
+
+.no-padding {
+    padding-right: 25px;
+}
+
+.dentro-card {
+    height: 90%;
+    margin-top: 10px;
+    margin-right: 10px;
+    background: #ffffe4;
+    border-radius: 30px;
+}
